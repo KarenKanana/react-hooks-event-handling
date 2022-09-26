@@ -5,24 +5,11 @@ import ChangeItUp from "./ChangeItUp";
 import Login from "./Login";
 
 function App() {
-  return (
-    <div>
-      <h3>onClick</h3>
-      <Tickler />
-      <hr />
+  function handleClick() {
+    console.log("click");
+  }
 
-      <MultiButton />
-      <hr />
-
-      <h3>onChange</h3>
-      <ChangeItUp />
-      <hr />
-
-      <h3>onSubmit</h3>
-      <Login />
-      <hr />
-    </div>
-  );
+  return <Clickable onClick={handleClick} />;
 }
 
 export default App;
