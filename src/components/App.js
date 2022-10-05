@@ -4,12 +4,37 @@ import MultiButton from "./MultiButton";
 import ChangeItUp from "./ChangeItUp";
 import Login from "./Login";
 
+
+function Clickable({ onClick }) {
+  return <button onClick={onClick}>Click Me</button>;
+
+}
 function App() {
+  return (
+    <div>
+      <h3>onClick</h3>
+      <Tickler />
+      <hr />
+
+      <MultiButton />
+      <hr />
+
+      <h3>onChange</h3>
+      <ChangeItUp />
+      <hr />
+
+      <h3>onSubmit</h3>
+      <Login />
+      <hr />
+    </div>
+  )
+
   function handleClick() {
     console.log("click");
+    return <Clickable onClick={handleClick} />;
   }
 
-  return <Clickable onClick={handleClick} />;
+  
 }
 
 export default App;
